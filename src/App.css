@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.member-card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  gap: 1rem; /*üye dataları(divler) arasında boşluk bırakmak için*/
 }
 
-.App-link {
-  color: #61dafb;
+/*member-card içindeki tüm divler için: */
+.member-card > div { 
+  flex-basis: 25%; /*hepsine %25 oranında alan tanı, hizala*/
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.member-card.header {
+  border: none;
+  font-weight: bold;
+}
+
+/*member-form içindeki tüm elementler için: */
+.member-form > * {
+  margin: 0.5rem 1rem;
+}
+
+.member-form {
+  margin-top: 5rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+/*member-form içindeki divlerin, içindeki label'lara hizalama:*/
+.member-form > div > label {
+  display: flex;
+
+}
+
+/*bu label'ların içindeki tüm itemlara:*/
+
+.member-form > div > label > * {
+  width: 50%;
+  
 }
